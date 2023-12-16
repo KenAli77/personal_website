@@ -6,10 +6,15 @@
                 <span class="logotext align-bottom mt-3 ms-1">digital</span>
             </v-col>
             <v-col justify="center" class="btn-container">
-                <v-btn rounded to="/" variant="plain">Home</v-btn>
-                <v-btn rounded to="/about" variant="plain">About</v-btn>
-                <v-btn rounded to="" variant="plain">Case Studies</v-btn>
-                <v-btn rounded to="/contact" variant="plain">Contact</v-btn>
+                <v-btn density="default" :ripple="false" rounded to="/" variant="plain"
+                    :class="{ 'selected': $route.path === '/' }">Home</v-btn>
+                <v-btn density="default" :ripple="false" rounded to="/about" variant="plain"
+                    :class="{ 'selected': $route.path === '/about' }">About</v-btn>
+                <v-btn density="default" :ripple="false" rounded to="" variant="plain"
+                    :class="{ 'selected': $route.path === '' }">Case
+                    Studies</v-btn>
+                <v-btn density="default" :ripple="false" rounded to="/contact" variant="plain"
+                    :class="{ 'selected': $route.path === '/contact' }">Contact</v-btn>
             </v-col>
             <v-col>
             </v-col>
@@ -42,6 +47,16 @@ const drawer = ref(false);
     font-weight: bold;
     font-size: 1.3rem;
     font-family: 'Montserrat', sans-serif;
+}
+
+.v-btn {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #292929;
+}
+
+.v-btn.selected {
+    text-decoration: underline;
 }
 
 .logotext {
