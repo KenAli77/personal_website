@@ -12,6 +12,8 @@
     "type-check": "vue-tsc --build --force"
   },
   "dependencies": {
+    "@fontsource-variable/montserrat": "^5.0.17",
+    "@fontsource-variable/rubik": "^5.0.20",
     "@mdi/font": "^7.3.67",
     "pinia": "^2.1.7",
     "vue": "^3.3.11",

@@ -1,23 +1,24 @@
 <template>
-    <div class="contact">
-        <v-card>
-            <v-card-title class="headline">Contact Us</v-card-title>
-            <v-card-text>
-                <v-form @submit.prevent="submitForm">
-                    <v-row>
-                        <v-col cols="12" sm="6">
-                            <v-text-field v-model="name" label="Name" required></v-text-field>
-                        </v-col>
-                        <v-col cols="12" sm="6">
-                            <v-text-field v-model="email" label="Email" required></v-text-field>
-                        </v-col>
-                    </v-row>
-                    <v-textarea v-model="message" label="Message" required></v-textarea>
-                    <v-btn type="submit" color="primary">Submit</v-btn>
-                </v-form>
-            </v-card-text>
-        </v-card>
-    </div>
+    <v-container class="contact" fluid>
+      <v-col>
+        <h1 class="header">Let's talk</h1>
+        <p>Fill in the form below, or contact me directly – and i will get back to you as soon as
+          possible.</p>
+        <v-form @submit.prevent="submitForm">
+          <v-row>
+            <v-col cols="12" sm="6">
+              <v-text-field variant="underlined" v-model="name" label="Name" required></v-text-field>
+            </v-col>
+            <v-col cols="12" sm="6">
+              <v-text-field variant="underlined" v-model="email" label="Email" required></v-text-field>
+            </v-col>
+          </v-row>
+          <v-textarea variant="underlined" v-model="message" label="Tell me about your project" required></v-textarea>
+          <v-btn rounded variant="outlined" type="submit" color="primary">Submit</v-btn>
+        </v-form>
+      </v-col>
+
+    </v-container>
 </template>
 
 <script lang="ts" setup>
@@ -35,8 +36,12 @@ const submitForm = () => {
 <style scoped>
 .contact {
     height: 100vh;
-    background-color: #f5f5f5;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header{
+  font-weight: bold;
 }
 /* Add custom styles here */
 </style>
