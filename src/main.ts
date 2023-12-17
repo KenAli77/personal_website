@@ -11,8 +11,20 @@ import "@mdi/font/css/materialdesignicons.css";
 import "@fontsource-variable/rubik";
 import "@fontsource-variable/montserrat";
 import "@fortawesome/fontawesome-free/css/all.css";
+/* import the fontawesome core */
+import { library } from "@fortawesome/fontawesome-svg-core";
+/* import font awesome icon component */
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import * as solidIcons from "@fortawesome/free-solid-svg-icons";
+import * as brandIcons from "@fortawesome/free-brands-svg-icons";
+import * as regularIcons from "@fortawesome/free-regular-svg-icons";
+
 import { fa } from "vuetify/iconsets/fa";
 import "./assets/main.css";
+
+// library.add(solidIcons);
+// library.add(brandIcons);
+// library.add(regularIcons);
 
 const vuetify = createVuetify({
   theme: {
@@ -23,7 +35,7 @@ const vuetify = createVuetify({
         secondary: "#b0bec5",
         accent: "#8c9eff",
         error: "#b71c1c",
-        text: "#292929",
+        text: "black",
       },
     },
   },

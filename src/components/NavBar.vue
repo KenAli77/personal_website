@@ -10,8 +10,8 @@
                     :class="{ 'selected': $route.path === '/' }">Home</v-btn>
                 <v-btn density="default" :ripple="false" rounded to="/about" variant="plain"
                     :class="{ 'selected': $route.path === '/about' }">About</v-btn>
-                <v-btn density="default" :ripple="false" rounded to="" variant="plain"
-                    :class="{ 'selected': $route.path === '' }">Case
+                <v-btn density="default" :ripple="false" rounded to="/projects" variant="plain"
+                    :class="{ 'selected': $route.path === '/projects' }">Case
                     Studies</v-btn>
                 <v-btn density="default" :ripple="false" rounded to="/contact" variant="plain"
                     :class="{ 'selected': $route.path === '/contact' }">Contact</v-btn>
@@ -36,7 +36,7 @@ const drawer = ref(false);
 }
 
 .logo {
-    background-color: #52b69a;
+    background-color: blue;
     border-radius: 8px;
     height: 40px;
     width: 40px;
@@ -51,7 +51,7 @@ const drawer = ref(false);
 
 .v-btn {
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #292929;
 }
 

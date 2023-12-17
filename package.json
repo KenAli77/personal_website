@@ -14,9 +14,15 @@
   "dependencies": {
     "@fontsource-variable/montserrat": "^5.0.17",
     "@fontsource-variable/rubik": "^5.0.20",
+    "@fortawesome/free-brands-svg-icons": "^6.5.1",
+    "@fortawesome/free-regular-svg-icons": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/vue-fontawesome": "^3.0.5",
     "@mdi/font": "^7.3.67",
+    "@unhead/vue": "^1.8.9",
     "pinia": "^2.1.7",
     "vue": "^3.3.11",
+    "vue-recaptcha": "^3.0.0-alpha.6",
     "vue-router": "^4.2.5",
     "vuetify": "^3.4.0-beta.1"
   },

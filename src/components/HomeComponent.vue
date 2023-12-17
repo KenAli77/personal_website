@@ -3,14 +3,13 @@
         <v-container fluid>
             <v-row align="center" justify="center">
                 <v-col cols="12" sm="8" md="6">
-                    <v-card class="py-10 px-5" variant="outlined">
-                        <!-- <h1 class="display-4">Welcome to My Portfolio</h1> -->
+                    <v-card class="mb-10" flat color="transparent">
                         <v-card-text>
                             <p class="subtitle-1">Transforming ideas Into <span style="color: blue;">innovative
                                     solutions</span>.</p>
                             <p class="subtitle-1">One project at a time.</p>
-                            <v-btn prepend-icon="mdi-arrow-top-right" variant="outlined" rounded color="primary"
-                                class="mt-4">Let's
+                            <v-btn to="/contact" prepend-icon="mdi-arrow-top-right" variant="outlined" rounded
+                                color="primary" class="mt-4">Let's
                                 talk</v-btn>
                         </v-card-text>
                     </v-card>
@@ -56,6 +55,10 @@
     font-weight: bold;
     color: #FF0000;
     /* Replace with your desired color */
+}
+
+.v-btn {
+    border-radius: 0%;
 }
 
 .mt-4 {

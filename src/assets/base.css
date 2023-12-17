@@ -91,9 +91,3 @@ body {
 .v-btn{
   text-transform: capitalize;
 }
-
-.body {
-  background-image: url('/../../public/background_overlay.jpg');
-  background-repeat: repeat;
-  opacity: 0.2; /* Adjust as needed */
-}
