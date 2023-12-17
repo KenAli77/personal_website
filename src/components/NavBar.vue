@@ -2,8 +2,11 @@
     <v-toolbar extented flat style="background-color: transparent">
         <v-row class="px-5" justify="center">
             <v-col justify="center">
-                <span class="logo">{k}</span>
-                <span class="logotext align-bottom mt-3 ms-1">digital</span>
+                <div class="logocontainer">
+                    <span class="logo">{k}</span>
+                    <span class="logotext align-bottom mt-3 ms-1">digital</span>
+
+                </div>
             </v-col>
             <v-col justify="center" class="btn-container">
                 <v-btn density="default" :ripple="false" rounded to="/" variant="plain"
@@ -16,8 +19,20 @@
                 <v-btn density="default" :ripple="false" rounded to="/contact" variant="plain"
                     :class="{ 'selected': $route.path === '/contact' }">Contact</v-btn>
             </v-col>
-            <v-col>
-            </v-col>
+            <!-- <v-col>
+                <v-btn>
+                    <v-icon>mdi-flag-english</v-icon>
+                </v-btn>
+                <v-btn>
+                    <v-icon>mdi-flag-german</v-icon>
+                </v-btn>
+                <v-btn>
+                    <v-icon>mdi-flag-spanish</v-icon>
+                </v-btn>
+                <v-btn>
+                    <v-icon>mdi-flag-italian</v-icon>
+                </v-btn>
+            </v-col> -->
 
         </v-row>
     </v-toolbar>
@@ -35,11 +50,14 @@ const drawer = ref(false);
     justify-content: space-evenly;
 }
 
+.logocontainer {
+    border: blue, solid, 10px;
+
+}
+
 .logo {
     background-color: blue;
-    border-radius: 8px;
-    height: 40px;
-    width: 40px;
+    border-radius: 0;
     /* Adjust as needed */
     /* Adjust as needed */
     padding: 5px;

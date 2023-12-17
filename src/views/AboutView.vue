@@ -80,8 +80,7 @@
           </div>
 
           <div v-if="index == 5" style="display: flex;">
-            <v-btn to="/contact" prepend-icon="mdi-arrow-top-right" variant="outlined" rounded color="primary"
-              class="mt-4">Let's
+            <v-btn to="/contact" flat prepend-icon="mdi-arrow-top-right" color="primary" class="mt-4">Let's
               talk</v-btn>
 
             <!-- <font-awesome-icon icon="fa-solid fa-user-secret" /> -->
