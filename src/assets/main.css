@@ -1,3 +1,9 @@
 @import './base.css';
 
+.body{
+    font-family: 'Chillax', sans-serif;
+}
 
+.p{
+    font-family: 'Plus Jakarta Sans',sans-serif;
+}

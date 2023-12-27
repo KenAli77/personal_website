@@ -42,6 +42,8 @@ const submitForm = () => {
   display: flex;
   align-items: center;
   flex-direction: column;
+  /*font-family: 'Rubik Variable', sans-serif;*/
+
   /* Add this line to center vertically */
   text-align: start;
   /* Add this line to center horizontally */

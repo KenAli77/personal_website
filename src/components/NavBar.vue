@@ -1,87 +1,100 @@
 <template>
-    <v-toolbar extented flat style="background-color: transparent">
-        <v-row class="px-5" justify="center">
-            <v-col justify="center">
-                <div class="logocontainer">
-                    <span class="logo">{k}</span>
-                    <span class="logotext align-bottom mt-3 ms-1">digital</span>
+  <v-toolbar :class="{ 'scrolled': scrolled, 'navbar': true }" extented style="background-color: transparent;  font-family: 'Rubik Variable', sans-serif;
+">
+    <div class="container">
+      <img class="logo" src="/src/assets/k-digital_logo_full.svg" alt="logo" />
 
-                </div>
-            </v-col>
-            <v-col justify="center" class="btn-container">
-                <v-btn density="default" :ripple="false" rounded to="/" variant="plain"
-                    :class="{ 'selected': $route.path === '/' }">Home</v-btn>
-                <v-btn density="default" :ripple="false" rounded to="/about" variant="plain"
-                    :class="{ 'selected': $route.path === '/about' }">About</v-btn>
-                <v-btn density="default" :ripple="false" rounded to="/projects" variant="plain"
-                    :class="{ 'selected': $route.path === '/projects' }">Case
-                    Studies</v-btn>
-                <v-btn density="default" :ripple="false" rounded to="/contact" variant="plain"
-                    :class="{ 'selected': $route.path === '/contact' }">Contact</v-btn>
-            </v-col>
-            <!-- <v-col>
-                <v-btn>
-                    <v-icon>mdi-flag-english</v-icon>
-                </v-btn>
-                <v-btn>
-                    <v-icon>mdi-flag-german</v-icon>
-                </v-btn>
-                <v-btn>
-                    <v-icon>mdi-flag-spanish</v-icon>
-                </v-btn>
-                <v-btn>
-                    <v-icon>mdi-flag-italian</v-icon>
-                </v-btn>
-            </v-col> -->
+      <div class="nav">
+        <button type="button" @click="scrollToSection('home')">Home
+        </button>
+        <button type="button" @click="scrollToSection('about')">About
+        </button>
+        <button type="button" @click="scrollToSection('projects')">Case
+          Studies
+        </button>
+        <button type="button" @click="scrollToSection('contact')">Contact
+        </button>
 
-        </v-row>
-    </v-toolbar>
+      </div>
+
+    </div>
+
+    <!-- <v-col>
+        <v-btn>
+            <v-icon>mdi-flag-english</v-icon>
+        </v-btn>
+        <v-btn>
+            <v-icon>mdi-flag-german</v-icon>
+        </v-btn>
+        <v-btn>
+            <v-icon>mdi-flag-spanish</v-icon>
+        </v-btn>
+        <v-btn>
+            <v-icon>mdi-flag-italian</v-icon>
+        </v-btn>
+    </v-col> -->
+
+  </v-toolbar>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+import router from "@/router";
 
 const drawer = ref(false);
+const props = defineProps({
+  scrolled: Boolean,
+});
+
+function scrollToSection(sectionId: string) {
+  const sectionElement = document.getElementById(sectionId);
+  if (sectionElement) {
+    sectionElement.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
 </script>
 
 <style scoped>
-.btn-container {
-    display: flex;
-    justify-content: space-evenly;
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
 }
 
-.logocontainer {
-    border: blue, solid, 10px;
+.navbar {
+  position: fixed;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
 
+.navbar.scrolled {
+  background-color: rgba(221,239,187, 0.95) !important;
 }
 
 .logo {
-    background-color: blue;
-    border-radius: 0;
-    /* Adjust as needed */
-    /* Adjust as needed */
-    padding: 5px;
-    color: white;
-    font-weight: bold;
-    font-size: 1.3rem;
-    font-family: 'Montserrat', sans-serif;
+  width: 100px;
+  object-fit: contain;
 }
 
-.v-btn {
-    font-weight: bold;
-    font-size: 1rem;
-    color: #292929;
+
+.container {
+  padding: 2%;
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+
+button {
+  font-size: 1rem;
+  color: #292929;
+  font-weight: normal;
+  font-family: 'Sora', sans-serif;
 }
 
 .v-btn.selected {
-    text-decoration: underline;
-}
-
-.logotext {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    font-size: 1.35rem;
-    font-style: italic;
-    color: #292929;
+  /*color: #FB5607;*/
 }
 </style>

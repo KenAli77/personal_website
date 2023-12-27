@@ -160,6 +160,7 @@ const sections = [
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'Rubik Variable', sans-serif;
   }
 }
 
@@ -170,9 +171,7 @@ const sections = [
 .heading {
   font-size: 1.3rem;
   line-height: 1.3;
-  font-weight: semi-bold;
   text-align: center;
-  color: black;
   margin-top: 5%;
   margin-bottom: 5%;
   /* Add spacing between lines */
@@ -189,16 +188,6 @@ const sections = [
   border-radius: 0%;
 }
 
-.text-h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
 
-.text-body-1 {
-  font-size: 16px;
-  line-height: 1.5;
-  color: #333333;
-  margin-bottom: 20px;
-}
+
 </style>

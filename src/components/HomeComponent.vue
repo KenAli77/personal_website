@@ -1,22 +1,20 @@
 <template>
-    <div class="home">
-        <v-container fluid>
-            <v-row align="center" justify="center">
-                <v-col cols="12" sm="8" md="6">
-                    <v-card class="mb-10" flat color="transparent">
-                        <v-card-text>
-                            <p class="subtitle-1">Transforming ideas Into <span style="color: blue;">innovative
-                                    solutions</span>.</p>
-                            <p class="subtitle-1">One project at a time.</p>
-                            <v-btn to="/contact" prepend-icon="mdi-arrow-top-right" variant="outlined" rounded
-                                color="primary" class="mt-4">Let's
-                                talk</v-btn>
-                        </v-card-text>
-                    </v-card>
-                </v-col>
-            </v-row>
-        </v-container>
+  <div class="home">
+    <div class="container">
+
+          <h3 class="title">Transforming ideas Into <span style="color: blue;">innovative
+                                    solutions</span>,</h3>
+          <h3 class="title">one project at a time.</h3>
+          <p class="subtitle">
+            Beyond code, we specialize in capturing the essence of your vision. Crafting software that not only
+            functions flawlessly but also delivers an unforgettable user experience.
+          </p>
+          <v-btn prepend-icon="mdi-arrow-top-right" variant="outlined" rounded
+                 color="primary" class="mt-4">Let's
+            talk
+          </v-btn>
     </div>
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -24,44 +22,45 @@
 </script>
 
 <style scoped>
-.v-parallax {
-    background-color: #7c0000;
-    background-image: linear-gradient(326deg, #7c0000 0%, #3e0000 74%);
-    background-size: cover;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 60%;
+  justify-content: center;
+  scroll-behavior: smooth;
+  gap: 10px;
+}
+
+.subtitle {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  opacity: 0.85;
 }
 
 .home {
-    height: 100vh;
-    display: flex;
-    background-color: transparent;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Rubik Variable', sans-serif;
+  height: 100vh;
+  display: flex;
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Sora', sans-serif;
+  font-weight: bold;
+  /*font-family: 'Rubik Variable', sans-serif;*/
 }
 
-.display-4 {
-    font-size: 3rem;
-    font-weight: 500;
-    margin-bottom: 1rem;
+.title {
+  font-weight: 400;
+  /* Add spacing between lines */
 }
 
-.subtitle-1 {
-    font-size: 2rem;
-    line-height: 1.3;
-    /* Add spacing between lines */
-}
-
-.bold-color {
-    font-weight: bold;
-    color: #FF0000;
-    /* Replace with your desired color */
-}
 
 .v-btn {
-    border-radius: 0%;
+  border-radius: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  align-self: end;
 }
 
-.mt-4 {
-    margin-top: 1rem;
-}
+
 </style>
